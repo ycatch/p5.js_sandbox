@@ -5,7 +5,7 @@ This is very simple play-ground for p5.js sketch.
 
 ## demo
 
-- Grobal mode  
+- Global mode  
   http://www.catch.jp/program/p5.js/index.html
 - Instance mode  
   http://www.catch.jp/program/p5.js/index_ls-mode.html
