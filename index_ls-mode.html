@@ -10,8 +10,15 @@
 </head>
 
 <body>
-	<h1>Instance mode demo - sandbox</h1>
+	<h1>p5.js - sandbox - Instance mode</h1>
 	<div id = "p5Canvas"></div>
+	<div>
+		<p>sandbox for p5.js verson 0.5.3. This example runs at the instance mode.</p>
+		<p>notice: all commands and constants need "p."</p>
+	</div>
+	<input type="button" onclick="run()" value="RUN">
+	<input type="button" onclick="stop()" value="STOP">
+	<br>
 <textarea id="editor" rows=10 cols=80 name="code">
 p.setup = function() {
 	p.createCanvas(p.windowWidth - 20, 240);
@@ -21,19 +28,14 @@ p.draw = function() {
 	p.fill(255);
 	p.ellipse(p.mouseX, p.mouseY, 50, 50);
 };</textarea>
-	<input type="button" onclick="run()" value="RUN"> 
-	<input type="button" onclick="stop()" value="STOP"> 
-	<hr />
-	<div>
-		<p>sandbox for p5.js. This example runs at the instance mode.</p>
-		<p>notice: all commands and constants need "p."</p>
-	</div>
 	<ul>
 		<li><a href='http://p5js.org/' target='_blank'>p5.js</a></li>
 		<li><a href='http://www.catch.jp/wiki/?p5.js' target='_blank'>p5.js - catch.jp-wiki</a></li>
 	</ul>
-
-	<script src="http://cdnjs.cloudflare.com/ajax/libs/p5.js/0.4.7/p5.min.js"></script>
+	<hr />
+	<p>Copyright 2015-2016 Yutaka Kachi</p>
+	<p>This HTML and code released under the <a href="http://sourceforge.jp/projects/opensource/wiki/licenses%2FMIT_license">MIT License</a>.</p>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.3/p5.min.js"></script>
 	<script>
 	var Pjs;
 	run();
@@ -43,7 +45,7 @@ p.draw = function() {
 			Pjs.remove();
 		}
 	}
-	
+
 	function run(){
 		//console.log("Run");
 		if (Pjs) {
