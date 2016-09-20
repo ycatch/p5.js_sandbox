@@ -35,28 +35,30 @@ p.draw = function() {
 	<hr />
 	<p>Copyright 2015-2016 Yutaka Kachi</p>
 	<p>This HTML and code released under the <a href="http://sourceforge.jp/projects/opensource/wiki/licenses%2FMIT_license">MIT License</a>.</p>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.3/p5.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.4.7/p5.min.js"></script>
 	<script>
 	var Pjs;
 	run();
 
 	function stop() {
 		if (Pjs) {
-			Pjs.remove();
+			//Pjs.remove();
+			Pjs.background(200);
 		}
 	}
 
 	function run(){
-		//console.log("Run");
+		console.log("Run");
 		if (Pjs) {
-			Pjs.remove();
+			//Pjs.remove();
 			Pjs.noCanvas();
+			Pjs.background(200);
 		}
 
 		try {
 			var s = new Function("p", document.getElementsByName('code')[0].value);
 			Pjs = new p5(s, "p5Canvas");
-			//console.log(Pjs);
+			console.log(Pjs);
 		} catch(e) {
 			alert(e);
 		}
