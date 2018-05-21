@@ -23,7 +23,7 @@ function run() {
     }
 
     try {
-        var s = new Function("p", document.getElementsByName('code')[0].value);
+        var s = new Function("p", document.getElementById('editor').value);
         Pjs = new p5(s);
         //console.log(Pjs);
     } catch (e) {

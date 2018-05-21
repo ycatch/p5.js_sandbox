@@ -16,10 +16,10 @@
 		<p>sandbox for p5.js verson 0.5.3. This example runs at the instance mode.</p>
 		<p>notice: all commands and constants need "p."</p>
 	</div>
-	<input type="button" onclick="run()" value="RUN">
-	<input type="button" onclick="stop()" value="STOP">
+    <button id="run">Re-Start</button>
+	<button id="stop">Clear</button>
 	<br>
-<textarea id="editor" rows=10 cols=80 name="code">
+<textarea id="editor" rows=10 cols=80>
 p.setup = function() {
 	p.createCanvas(p.windowWidth - 20, 240);
 	p.background(200);
@@ -38,6 +38,12 @@ p.draw = function() {
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.3/p5.min.js"></script>
 	<script>
 	var Pjs;
+    document.getElementById('run').onclick = function() {
+        run();
+    }
+    document.getElementById('stop').onclick = function() {
+        stop();
+    }
 	run();
 
 	function stop() {
@@ -56,7 +62,7 @@ p.draw = function() {
 		}
 
 		try {
-			var s = new Function("p", document.getElementsByName('code')[0].value);
+			var s = new Function("p", document.getElementById('editor').value);
 			Pjs = new p5(s, "p5Canvas");
 			console.log(Pjs);
 		} catch(e) {
