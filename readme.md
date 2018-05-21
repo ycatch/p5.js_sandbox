@@ -8,7 +8,7 @@ Very simple play-ground for p5.js sketch.
 - Global mode  
   http://ycatch.github.io/p5.js_sandbox/index.html
 - Instance mode  
-  http://ycatch.github.io/p5.js_sandbox/index_ls-mode.html
+  http://ycatch.github.io/p5.js_sandbox/index_is-mode.html
 
 
 ## license
