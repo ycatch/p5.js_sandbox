@@ -43,38 +43,7 @@ draw = function() {
 	<p>Copyright 2015-2018 Yutaka Kachi</p>
 	<p>This HTML and code released under the <a href="http://sourceforge.jp/projects/opensource/wiki/licenses%2FMIT_license">MIT License</a>.</p>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.3/p5.min.js"></script>
-	<script>
-		var Pjs;
-        document.getElementById('run').onclick = function() {
-            run();
-        }
-        document.getElementById('stop').onclick = function() {
-            stop();
-        }
-		run()
-
-		function stop() {
-			if (Pjs) {
-				//remove();
-				background(200);
-			}
-		}
-
-		function run() {
-			//console.log("Run");
-			if (Pjs) {
-				background(200);
-			}
-
-			try {
-				var s = new Function("p", document.getElementsByName('code')[0].value);
-				Pjs = new p5(s);
-				//console.log(Pjs);
-			} catch (e) {
-				alert(e);
-			}
-		}
-	</script>
+	<script src="./js/main.js"></script>
 </body>
 
 </html>
