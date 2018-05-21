@@ -1,31 +1,30 @@
 // main.js for p5.js sandbox
 
-var Pjs;
+let Pjs;
 document.getElementById('run').onclick = function() {
-    run();
+    Pjs = run(Pjs);
 }
 document.getElementById('stop').onclick = function() {
-    stop();
+    stop(Pjs);
 }
-run()
+Pjs = run(Pjs);
 
-function stop() {
-    if (Pjs) {
-        //remove();
+function stop(p5_obj) {
+    if (p5_obj) {
         background(200);
     }
 }
 
-function run() {
-    //console.log("Run");
-    if (Pjs) {
+function run(p5_obj) {
+    if (p5_obj) {
         background(200);
     }
 
     try {
-        var s = new Function("p", document.getElementById('editor').value);
-        Pjs = new p5(s);
-        //console.log(Pjs);
+        const s = new Function("p", document.getElementById('editor').value);
+        p5_obj = new p5(s);
+        return p5_obj;
+        
     } catch (e) {
         alert(e);
     }

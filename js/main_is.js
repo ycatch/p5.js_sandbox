@@ -1,33 +1,32 @@
 // main_ls.js for p5.js sandbox instance mode
 
-var Pjs;
+let Pjs;
 document.getElementById('run').onclick = function() {
-    run();
+    Pjs = run(Pjs);
 }
 document.getElementById('stop').onclick = function() {
-    stop();
+    stop(Pjs);
 }
-run();
+Pjs = run(Pjs);
 
-function stop() {
-    if (Pjs) {
-        //Pjs.remove();
-        Pjs.background(200);
+function stop(p5_obj) {
+    if (p5_obj) {
+        p5_obj.background(200);
     }
 }
 
-function run(){
-    console.log("Run");
-    if (Pjs) {
-        //Pjs.remove();
-        Pjs.noCanvas();
-        Pjs.background(200);
+function run(p5_obj){
+
+    if (p5_obj) {
+        p5_obj.noCanvas();
+        p5_obj.background(200);
     }
 
     try {
-        var s = new Function("p", document.getElementById('editor').value);
-        Pjs = new p5(s, "p5Canvas");
-        console.log(Pjs);
+        const s = new Function("p", document.getElementById('editor').value);
+        p5_obj = new p5(s, "p5Canvas");   // "p5Canvas" is div-id for Canvas
+        return p5_obj;
+
     } catch(e) {
         alert(e);
     }
