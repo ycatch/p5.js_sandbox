@@ -21,8 +21,8 @@
 	<div>
 		<p>run with p5.js version 0.5.3</p>
 	</div>
-	<input type="button" onclick="run()" value="Re-Start">
-	<input type="button" onclick="stop()" value="Clear">
+	<button id="run">Re-Start</button>
+	<button id="stop">Clear</button>
 	<br>
 	<textarea id="editor" rows=10 cols=80 name="code">
 setup = function() {
@@ -40,11 +40,17 @@ draw = function() {
 		<li><a href='http://www.catch.jp/wiki/?p5.js' target='_blank'>p5.js - catch.jp-wiki</a></li>
 	</ul>
 	<hr />
-	<p>Copyright 2015-2016 Yutaka Kachi</p>
+	<p>Copyright 2015-2018 Yutaka Kachi</p>
 	<p>This HTML and code released under the <a href="http://sourceforge.jp/projects/opensource/wiki/licenses%2FMIT_license">MIT License</a>.</p>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.3/p5.min.js"></script>
 	<script>
 		var Pjs;
+        document.getElementById('run').onclick = function() {
+            run();
+        }
+        document.getElementById('stop').onclick = function() {
+            stop();
+        }
 		run()
 
 		function stop() {
