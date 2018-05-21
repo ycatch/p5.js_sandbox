@@ -6,9 +6,9 @@ Very simple play-ground for p5.js sketch.
 ## demo
 
 - Global mode  
-  http://www.catch.jp/program/p5.js/index.html
+  http://ycatch.github.io/p5.js_sandbox/index.html
 - Instance mode  
-  http://www.catch.jp/program/p5.js/index_ls-mode.html
+  http://ycatch.github.io/p5.js_sandbox/index_ls-mode.html
 
 
 ## license
