@@ -1,4 +1,4 @@
-export function run(p5_obj) {
+export const run = (p5_obj) => {
     if (p5_obj) {
         background(200);
     }
