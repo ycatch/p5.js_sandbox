@@ -2,6 +2,7 @@
 
 Very simple play-ground for p5.js sketch.
 
+This code use ES modules.
 
 ## demo
 
